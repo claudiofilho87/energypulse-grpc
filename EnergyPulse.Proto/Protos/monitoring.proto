@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option csharp_namespace = "EnergyPulse.Grpc";
+
+import "google/protobuf/timestamp.proto";
+
+service MonitoringService {
+  rpc GetSubstationInfo (InfoRequest) returns (SubstationInfo); // Unary
+  rpc StreamLiveTelemetry (MonitorRequest) returns (stream TelemetryData); // Server Streaming
+  rpc UploadHistoricalLogs (stream TelemetryData) returns (UploadSummary); // Client Streaming
+  rpc FrequencyControlLoop (stream FrequencyUpdate) returns (stream ControlAction); // Bi-directional Streaming
+}
+
+message InfoRequest { int32 substation_id = 1; }
+
+message SubstationInfo {
+  string name = 1;
+  string location = 2;
+  double max_capacity_mw = 3;
+}
+
+message MonitorRequest { int32 interval_ms = 1; }
+
+message TelemetryData {
+  double voltage = 1;
+  double current = 2;
+  double frequency = 3;
+  google.protobuf.Timestamp timestamp = 4;
+}
+
+message UploadSummary {
+  int32 records_processed = 1;
+  string status = 2;
+}
+
+message FrequencyUpdate { double frequency = 1; }
+
+message ControlAction { 
+  string action = 1;
+  double value = 2;
+}
