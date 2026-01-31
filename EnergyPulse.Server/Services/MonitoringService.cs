@@ -43,8 +43,6 @@ public class MonitoringService : EnergyPulse.Grpc.MonitoringService.MonitoringSe
 
             await responseStream.WriteAsync(data);
             
-            _logger.LogInformation("Sending Telemetry: {V}V | {Hz}Hz", data.Voltage.ToString("F2"), data.Frequency.ToString("F2"));
-            
             time += 0.1;
 
             await Task.Delay(request.IntervalMs, context.CancellationToken);
@@ -67,8 +65,7 @@ public class MonitoringService : EnergyPulse.Grpc.MonitoringService.MonitoringSe
             var i = message.Current;
             var f = message.Frequency;
             var timestamp = message.Timestamp.ToDateTime();
-            
-            _logger.LogInformation("Processed: {V}V | {A}A | {Hz}Hz | Date: {T}", v, i, f, timestamp);
+
         }
         
         _logger.LogInformation("Synchronization complete. {Count} records processed.", totalRecords);

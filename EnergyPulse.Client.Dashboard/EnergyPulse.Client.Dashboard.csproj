@@ -1,16 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <OutputType>Exe</OutputType>
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>EnergyPulse.Proto</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Grpc.Net.Client" Version="2.76.0" />
-      <PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
-      <PackageReference Include="Serilog.Sinks.File" Version="8.0.0-dev-02318" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\EnergyPulse.Server\EnergyPulse.Server.csproj" />
+    </ItemGroup>
 </Project>
