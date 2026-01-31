@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergyPulse.Server", "Energ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergyPulse.Client.Dashboard", "EnergyPulse.Client.Dashboard\EnergyPulse.Client.Dashboard.csproj", "{ECF0EE94-611E-483D-A11D-E3C9BCAFDE4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergyPulse.Client.Sensor", "EnergyPulse.Client.Sensor\EnergyPulse.Client.Sensor.csproj", "{D4C3D3C5-9C6F-4B55-9283-91E4F4066D24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{ECF0EE94-611E-483D-A11D-E3C9BCAFDE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECF0EE94-611E-483D-A11D-E3C9BCAFDE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECF0EE94-611E-483D-A11D-E3C9BCAFDE4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C3D3C5-9C6F-4B55-9283-91E4F4066D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C3D3C5-9C6F-4B55-9283-91E4F4066D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C3D3C5-9C6F-4B55-9283-91E4F4066D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C3D3C5-9C6F-4B55-9283-91E4F4066D24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
