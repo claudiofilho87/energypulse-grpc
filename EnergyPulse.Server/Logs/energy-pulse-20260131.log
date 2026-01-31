@@ -1,0 +1,7 @@
+2026-01-31 08:20:09.268 -03:00 [INF] Now listening on: http://localhost:5210
+2026-01-31 08:20:09.318 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-31 08:20:09.319 -03:00 [INF] Hosting environment: Development
+2026-01-31 08:20:09.319 -03:00 [INF] Content root path: /Users/claudiofilho/Development/projetos/pessoal/energypulse-grpc/EnergyPulse.Server
+2026-01-31 08:20:23.153 -03:00 [INF] Starting to receive historical logs...
+2026-01-31 08:20:23.164 -03:00 [INF] Synchronization complete. 100 records processed.
+2026-01-31 08:21:38.470 -03:00 [INF] Application is shutting down...
