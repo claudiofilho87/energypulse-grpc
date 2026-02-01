@@ -159,4 +159,4 @@ This project is a demonstration of gRPC patterns in .NET for educational purpose
 
 ## Author
 
-Cláudio Filho
+Claudio Filho
